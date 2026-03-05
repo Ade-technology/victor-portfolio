@@ -469,3 +469,4 @@ export const otherSkills = [
   { name: "Off-page SEO", icon: "https://img.icons8.com/fluency/144/search.png" },
   { name: "AI SEO", icon: "https://img.icons8.com/color/144/artificial-intelligence.png" },
 ];
+
