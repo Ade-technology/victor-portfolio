@@ -26,15 +26,17 @@ export const personalInfo = {
 export interface Project {
   id: string;
   title: string;
-  description: string;
-  longDescription: string;
+  description: string;       // Short description for home card
+  longDescription: string;   // Full description for project page
   image: string;
   techStack: string[];
   category: string;
   liveUrl?: string;
   githubUrl?: string;
-  googlePlayStoreUrl?: string; // Button: Download on PlayStore
-  apkDownloadUrl?: string; // Button: Download the App
+  googlePlayStoreUrl?: string;
+  apkDownloadUrl?: string;
+  problem?: string;  // Optional, used only in full project page
+  solution?: string; // Optional, used only in full project page
 }
 
 export const projects: Project[] = [
@@ -139,7 +141,7 @@ export const projects: Project[] = [
 },
   {
   id: "lulichat-landing-page",
-  title: "Lulichat – AI-Powered Customer Chat Platform Landing Page",
+  title: "Lulichat - AI-Powered Customer Chat Platform Landing Page",
   description: "Landing page for Lulichat, a Next.js web platform providing AI-driven chat solutions for businesses in Nigeria and Africa.",
   longDescription: "Lulichat is the official landing page for an AI-powered customer chat platform designed to help businesses automate and streamline their customer support. Built with Next.js for fast performance and SEO optimization, the landing page showcases key features, service offerings, and integrations with WhatsApp, Instagram, and other communication channels.\n\nI contributed to the frontend development, implementing responsive layouts, interactive sections, and smooth user experiences optimized for conversion and engagement. The project highlights expertise in modern web development, React/Next.js frameworks, and UI/UX design tailored for tech startups and small businesses.\n\nKey features include responsive design, dynamic content sections, optimized SEO, interactive call-to-action buttons, and seamless integration with marketing and AI automation tools.",
   image: "/assets/Lulichat-preview.png",
@@ -159,7 +161,7 @@ export const projects: Project[] = [
   id: "msquared-kiddies-arena",
   title: "Msquared Kiddies Arena – Kids E-commerce Platform",
   description: "A full-featured e-commerce website for Msquared Kiddies Arena, built on WordPress with WooCommerce for online sales.",
-  longDescription: "Msquared Kiddies Arena is a complete e-commerce platform built on WordPress, designed to offer a seamless shopping experience for customers of the kids’ store. The platform integrates WooCommerce for product management, online payments, and order tracking, while ensuring a responsive and mobile-friendly design. \n\nI contributed to the frontend customization, implementing responsive themes, optimizing user experience, and integrating essential plugins for payments, inventory, and shipping. This project demonstrates expertise in WordPress theme development, e-commerce workflow design, and creating secure, scalable online shopping platforms.",
+  longDescription: "Msquared Kiddies Arena is a complete e-commerce platform built on WordPress, designed to offer a seamless shopping experience for customers of the kids' store. The platform integrates WooCommerce for product management, online payments, and order tracking, while ensuring a responsive and mobile-friendly design. \n\nI contributed to the frontend customization, implementing responsive themes, optimizing user experience, and integrating essential plugins for payments, inventory, and shipping. This project demonstrates expertise in WordPress theme development, e-commerce workflow design, and creating secure, scalable online shopping platforms.",
   image: "/assets/msquareka-overview.png",
   techStack: [
     "WordPress",
@@ -219,32 +221,33 @@ export const projects: Project[] = [
 },
 // ---------------- SEO & Content ----------------
 {
-  id: "lulichat-full-seo",
-  title: "Lulichat Full SEO with AI SEO",
-  description: "Full Google Business Profile setup, local SEO optimization, and content strategy for Lulichat.",
-  longDescription: "Project Problem:\nLulichat had no Google presence—no profile, no keywords, no photos, and no categories. Google couldn't understand the business, so it never appeared on Search or Maps. Visibility was zero, engagement was low, and potential clients couldn't discover them.\n\nSolution:\nI built their entire Google Business Profile from scratch: added correct categories, a keyword-rich description, branded visuals, service list, and GBP posts. I aligned website signals, strengthened Google Maps SEO, and improved their ranking for CRM-related keywords.",
-  image: "/assets/lulichat-seo.png",
-  techStack: [
-    "Google Business Profile (GBP) set-up",
-    "GBP Optimization",
-    "Technical SEO",
-    "On-Page SEO",
-    "Off-Page SEO",
-    "AI SEO",
-    "Business Listing",
-    "Backlinking",
-    "SEO Citation",
-    "Search Engine Marketing (SEM)",
-  ],
-  category: "SEO & Content",
-  liveUrl: "https://docs.google.com/presentation/d/1eAa6NA7bSmdu7AFU4cX9uJ0AlAOQBy7fcZjdqjANLnk/edit?usp=sharing",
-  githubUrl: ""
-},
+    id: "lulichat-full-seo",
+    title: "Lulichat Full SEO with AI SEO",
+    description: "Full Google Business Profile setup, local SEO optimization, and content strategy for Lulichat.",
+    longDescription:
+      "Initially Lulichat had no Google presence - no profile, no keywords, no photos, and no categories. Google couldn't understand the business, so it never appeared on Search or Maps. Visibility was zero, engagement was low, and potential clients couldn't discover them. So, I built their entire Google Business Profile from scratch: added correct categories, a keyword-rich description, branded visuals, service list, and GBP posts. I aligned website signals, strengthened Google Maps SEO, and improved their ranking for CRM-related keywords.",
+    image: "/assets/lulichat-seo.png",
+    techStack: [
+      "Google Business Profile (GBP) set-up",
+      "GBP Optimization",
+      "Technical SEO",
+      "On-Page SEO",
+      "Off-Page SEO",
+      "AI SEO",
+      "Business Listing",
+      "Backlinking",
+      "SEO Citation",
+      "Search Engine Marketing (SEM)",
+    ],
+    category: "SEO & Content",
+    liveUrl: "https://docs.google.com/presentation/d/1eAa6NA7bSmdu7AFU4cX9uJ0AlAOQBy7fcZjdqjANLnk/edit?usp=sharing",
+    githubUrl: "",
+  },
   {
   id: "digitek-hub-seo",
     title: "Digitek Hub",
     description: "Full GBP setup and local SEO optimization for Digitek Hub, improving visibility and inquiries.",
-    longDescription: "Project Problem:\nDigitek Hub had no Google Business Profile, meaning zero local search presence. No keywords, categories, photos, or SEO signals. Google had nothing to rank, making the brand invisible, untrustworthy, and unsearchable.\n\nSolution:\nI created their full GBP setup, added optimized categories, descriptions, branded visuals, and keyword-rich services. I improved website relevance, activated posts, and implemented map SEO—building a strong digital footprint for visibility and inquiries.",
+    longDescription: "Digitek Hub had no Google Business Profile at first, meaning zero local search presence. No keywords, categories, photos, or SEO signals. Google had nothing to rank, making the brand invisible, untrustworthy, and unsearchable. So, through my expertise I strategically created their full GBP setup, added optimized categories, descriptions, branded visuals, and keyword-rich services. I improved website relevance, activated posts, and implemented map SEO building a strong digital footprint for visibility and inquiries.",
     image: "/assets/digitekhub-seo.png",
     techStack: [
     "Google Business Profile (GBP) set-up",
@@ -266,7 +269,7 @@ export const projects: Project[] = [
   id: "lulifiber-seo",
     title: "Lulifiber Internet Company",
     description: "SEO and GBP setup for Lulifiber, improving online visibility for fiber internet services.",
-    longDescription: "Project Problem:\nLulifiber had almost no online visibility. No GBP, no keywords, wrong categories, no service list, no posts, and outdated visuals. Customers searching for 'fiber internet,' 'unlimited broadband,' and 'WiFi installation' could not find the brand.\n\nSolution:\nI built a complete GBP setup with proper categories, keyword-rich descriptions, branded visuals, and optimized services. I aligned their website with local SEO signals and strengthened Google Maps SEO, making Lulifiber more discoverable in a competitive ISP market.",
+    longDescription: "Lulifiber had almost no online visibility. No GBP, no keywords, wrong categories, no service list, no posts, and outdated visuals. Customers searching for 'fiber internet,' 'unlimited broadband,' and 'WiFi installation' could not find the brand. At the end of my strategic plan I built a complete GBP setup with proper categories, keyword-rich descriptions, branded visuals, and optimized services. I aligned their website with local SEO signals and strengthened Google Maps SEO, making Lulifiber more discoverable in a competitive ISP market.",
     image: "/assets/lulifiber-seo.png",
     techStack: [
     "Google Business Profile (GBP) set-up",

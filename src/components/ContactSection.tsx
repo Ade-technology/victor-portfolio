@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import contactIllustration from "@/assets/contact-illustration.png";
 import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
@@ -42,10 +41,15 @@ const ContactSection = () => {
 
       setStatusMessage("✅ Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-    } catch (error: any) {
-      console.log("FULL ERROR:", error);
-      setStatusMessage(`❌ ${error?.text || "Email failed"}`);
-    }
+    } catch (error: unknown) {
+  console.log("FULL ERROR:", error);
+
+  if (error instanceof Error) {
+    setStatusMessage(`❌ ${error.message}`);
+  } else {
+    setStatusMessage("❌ Email failed");
+  }
+}
 
     setIsSending(false);
   };
@@ -72,7 +76,7 @@ const ContactSection = () => {
             className="flex justify-center"
           >
             <img
-              src={contactIllustration}
+              src="/assets/contact-illustration.png"
               alt="Contact illustration"
               className="w-full max-w-md"
             />

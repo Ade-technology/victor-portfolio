@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { personalInfo, frontendSkills, backendSkills, otherSkills } from "@/data/portfolio";
-import profilePic from "@/assets/profile-pic.jpg";
 
 const tabs = ["Frontend", "Backend", "Others"] as const;
 const skillSets = { Frontend: frontendSkills, Backend: backendSkills, Others: otherSkills };
@@ -30,7 +29,7 @@ const AboutSection = () => {
           >
             <div className="flex flex-col items-center">
               <div className="w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-xl border border-border">
-                <img src={profilePic} alt="Victor Adeleye" className="w-full h-full object-cover object-top" />
+                <img src="/assets/profile2-pic.jpg.jpg" alt="Victor Adeleye" className="w-full h-full object-cover object-top" />
               </div>
               <p className="mt-4 text-sm text-muted-foreground font-mono">&lt;I build stuff 🚀/&gt;</p>
             </div>

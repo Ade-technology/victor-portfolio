@@ -1,7 +1,71 @@
+"use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Briefcase, GraduationCap, Award } from "lucide-react";
-import { experiences, education, certificates as portfolioCertificates } from "@/data/portfolio";
+
+// Type definitions for better TS support
+interface Experience {
+  company: string;
+  role: string;
+  duration: string;
+  points: string[];
+  skills: string[];
+}
+
+interface Education {
+  institution: string;
+  degree: string;
+  duration: string;
+  highlights: string[];
+}
+
+interface Certificate {
+  title: string;
+  institution?: string;
+  issuer?: string;
+  year?: string;
+  duration?: string;
+  points?: string[];
+  skills?: string[];
+}
+
+// Sample data (replace with your actual data or import from "@/data/portfolio")
+const experiences: Experience[] = [
+  {
+    company: "ABC Corp",
+    role: "Frontend Developer",
+    duration: "Jan 2022 - Present",
+    points: ["Built responsive React apps", "Improved site performance"],
+    skills: ["React", "TypeScript", "TailwindCSS"],
+  },
+  {
+    company: "XYZ Ltd",
+    role: "Backend Developer",
+    duration: "Jun 2020 - Dec 2021",
+    points: ["Designed APIs with Node.js", "Implemented authentication"],
+    skills: ["Node.js", "Express", "MongoDB"],
+  },
+];
+
+const education: Education[] = [
+  {
+    institution: "University of Lagos",
+    degree: "B.Sc. Computer Science",
+    duration: "2015 - 2019",
+    highlights: ["Graduated with First Class", "President of Coding Club"],
+  },
+];
+
+const certificates: Certificate[] = [
+  {
+    title: "React Developer Certification",
+    issuer: "Coursera",
+    year: "2021",
+    points: ["Advanced React patterns", "State management with Redux"],
+    skills: ["React", "Redux"],
+  },
+];
 
 const INITIAL_VISIBLE = 2;
 
@@ -13,11 +77,7 @@ const ExperienceSection = () => {
 
   const visibleExperiences = showAllExp ? experiences : experiences.slice(0, INITIAL_VISIBLE);
   const visibleEducation = showAllEdu ? education : education.slice(0, INITIAL_VISIBLE);
-  const visibleCertificates = showAllCert ? portfolioCertificates : portfolioCertificates.slice(0, INITIAL_VISIBLE);
-
-  const hasMoreExp = experiences.length > INITIAL_VISIBLE;
-  const hasMoreEdu = education.length > INITIAL_VISIBLE;
-  const hasMoreCert = portfolioCertificates.length > INITIAL_VISIBLE;
+  const visibleCertificates = showAllCert ? certificates : certificates.slice(0, INITIAL_VISIBLE);
 
   return (
     <section id="experience" className="py-20 section-alt">
@@ -74,7 +134,7 @@ const ExperienceSection = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.15 }}
+                    transition={{ delay: i * 0.1 }}
                     className={`relative flex items-start mb-12 md:mb-16 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                   >
                     <div className={`w-full md:w-[calc(50%-2rem)] ml-14 md:ml-0 ${i % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
@@ -106,7 +166,7 @@ const ExperienceSection = () => {
                     <div className="hidden md:block md:w-[calc(50%-2rem)]" />
                   </motion.div>
                 ))}
-                {hasMoreExp && (
+                {experiences.length > INITIAL_VISIBLE && (
                   <div className="flex justify-center relative z-10">
                     <button
                       onClick={() => setShowAllExp(!showAllExp)}
@@ -128,7 +188,7 @@ const ExperienceSection = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.15 }}
+                    transition={{ delay: i * 0.1 }}
                     className={`relative flex items-start mb-12 md:mb-16 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                   >
                     <div className={`w-full md:w-[calc(50%-2rem)] ml-14 md:ml-0 ${i % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
@@ -153,7 +213,7 @@ const ExperienceSection = () => {
                     <div className="hidden md:block md:w-[calc(50%-2rem)]" />
                   </motion.div>
                 ))}
-                {hasMoreEdu && (
+                {education.length > INITIAL_VISIBLE && (
                   <div className="flex justify-center relative z-10">
                     <button
                       onClick={() => setShowAllEdu(!showAllEdu)}
@@ -175,7 +235,7 @@ const ExperienceSection = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.15 }}
+                    transition={{ delay: i * 0.1 }}
                     className={`relative flex items-start mb-12 md:mb-16 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                   >
                     <div className={`w-full md:w-[calc(50%-2rem)] ml-14 md:ml-0 ${i % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
@@ -184,14 +244,16 @@ const ExperienceSection = () => {
                         <p className="text-primary text-sm font-medium mt-1">
                           {cert.institution || cert.issuer} | {cert.year || cert.duration}
                         </p>
-                        <ul className="mt-3 space-y-2">
-                          {cert.points?.map((point, j) => (
-                            <li key={j} className="text-sm text-muted-foreground flex gap-2">
-                              <span className="text-primary mt-0.5 shrink-0">•</span>
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
+                        {cert.points && (
+                          <ul className="mt-3 space-y-2">
+                            {cert.points.map((point, j) => (
+                              <li key={j} className="text-sm text-muted-foreground flex gap-2">
+                                <span className="text-primary mt-0.5 shrink-0">•</span>
+                                {point}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                         {cert.skills && (
                           <div className="flex flex-wrap gap-2 mt-4">
                             {cert.skills.map((skill) => (
@@ -209,7 +271,7 @@ const ExperienceSection = () => {
                     <div className="hidden md:block md:w-[calc(50%-2rem)]" />
                   </motion.div>
                 ))}
-                {hasMoreCert && (
+                {certificates.length > INITIAL_VISIBLE && (
                   <div className="flex justify-center relative z-10">
                     <button
                       onClick={() => setShowAllCert(!showAllCert)}

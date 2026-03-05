@@ -13,14 +13,16 @@ const ProjectsSection = () => {
   const filtered = useMemo(() => {
     const categoryPriority = ["Mobile Apps", "Web dev", "SEO & Content", "IT & Automation"];
 
-    // Show Mobile Apps first in 'All', Web dev next, then others
+    // Filter by category or sort all by priority
     let result =
       active === "All"
         ? [...projects].sort(
-            (a, b) => categoryPriority.indexOf(a.category) - categoryPriority.indexOf(b.category)
+            (a, b) =>
+              categoryPriority.indexOf(a.category) - categoryPriority.indexOf(b.category)
           )
         : projects.filter((p) => p.category === active);
 
+    // Apply search filter
     if (search.trim()) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -37,6 +39,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
+        {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +49,7 @@ const ProjectsSection = () => {
           Projects
         </motion.h2>
 
-        {/* Search */}
+        {/* Search Input */}
         <div className="max-w-md mx-auto mb-6">
           <div className="relative">
             <Search
@@ -63,7 +66,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Category tabs */}
+        {/* Category Tabs */}
         <div className="flex justify-center gap-2 mb-10 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -80,6 +83,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
+        {/* Projects Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((project, i) => (
             <motion.div
@@ -93,6 +97,7 @@ const ProjectsSection = () => {
                 to={`/project/${project.id}`}
                 className="block group rounded-xl overflow-hidden bg-card border border-border card-hover"
               >
+                {/* Project Image */}
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={project.image}
@@ -100,18 +105,30 @@ const ProjectsSection = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
+
                 <div className="p-4">
+                  {/* Project Title */}
                   <h3 className="font-heading font-bold text-lg mb-1 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                  <p className="text-xs text-primary mt-2 font-medium">
-                    {project.techStack.slice(0, 4).join(" · ")}
+
+                  {/* Project Short Description */}
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {project.description}
                   </p>
+
+                  {/* Project Tech Stack */}
+                  {project.techStack.length > 0 && (
+                    <p className="text-xs text-primary mt-2 font-medium">
+                      {project.techStack.slice(0, 4).join(" · ")}
+                    </p>
+                  )}
                 </div>
               </Link>
             </motion.div>
           ))}
+
+          {/* No Results Message */}
           {filtered.length === 0 && (
             <div className="col-span-full text-center py-12 text-muted-foreground">
               No projects found matching your search.

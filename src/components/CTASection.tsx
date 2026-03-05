@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Mail, Calendar } from "lucide-react";
-import portfolioPreview from "@/assets/portfolio-preview.jpg";
 
 const CTASection = () => {
   const scrollToContact = () => {
@@ -53,7 +52,7 @@ const CTASection = () => {
           >
             <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
               <img
-                src={portfolioPreview}
+                src="/assets/portfolio-preview.jpg"
                 alt="Portfolio Preview"
                 className="w-full h-auto"
               />

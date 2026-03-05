@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { ChevronRight } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
-import profilePic from "@/assets/profile-pic.jpg";
 
 const HeroSection = () => {
   return (
@@ -46,7 +45,8 @@ const HeroSection = () => {
             className="relative flex flex-col items-center"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
-              <img src={profilePic} alt="Victor Adeleye" className="w-full h-full object-cover object-top" />
+              {/* Public folder path */}
+              <img src="/assets/profile-pic.jpg" alt="Victor Adeleye" className="w-full h-full object-cover object-top" />
             </div>
           </motion.div>
         </div>
