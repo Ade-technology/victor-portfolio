@@ -45,7 +45,7 @@ export const projects: Project[] = [
   longDescription:
     "PointOne Microfinance Bank Mobile App is a secure digital banking platform designed to provide seamless financial services including loan applications, repayment scheduling, wallet management, and real-time transaction tracking. The application empowers individuals and small businesses with fast, transparent, and accessible microfinance solutions.\n\nAt Alabian Solutions Limited, I contributed to the frontend development of the mobile application, building intuitive financial dashboards, implementing secure form validation, integrating APIs for loan and wallet operations, and optimizing mobile performance. The project strengthened my experience in fintech product development, secure user interface systems, and scalable mobile architecture.",
   image:
-    "/src/assets/pointone-mcb.jpg",
+    "/assets/pointone-mcb.jpg",
   techStack: [
     "React Native",
     "JavaScript",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
   longDescription:
     "Lagos Schools Online Application Portal is the official digital admission platform serving public and private schools across Lagos State. The mobile application streamlines the entire school enrollment process, allowing parents and guardians to submit applications, upload required documents, and track admission status in real-time.\n\nWhile working at Alabian Solutions Limited, I contributed to the frontend development of the mobile application, implementing responsive UI components, optimizing application workflows, integrating REST APIs, and enhancing user experience for seamless navigation. The platform improves digital accessibility, reduces manual paperwork, and increases transparency in the Lagos State education system.",
   image:
-    "/src/assets/lag-skul.jpg",
+    "/assets/lag-skul.jpg",
   techStack: [
     "React Native",
     "JavaScript",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   longDescription:
     "ImageX is an AI-powered mobile application that converts text prompts into high-quality, visually stunning images using advanced artificial intelligence models. Designed for creators, designers, marketers, and digital enthusiasts, the app enables users to instantly generate custom visuals directly from their smartphones.\n\nBuilt with React Native for cross-platform performance and Node.js for backend orchestration, ImageX integrates AI image generation APIs with a clean, responsive, and user-friendly mobile interface. The application focuses on real-time API communication, secure request handling, optimized performance, and scalable architecture.\n\nKey features include dynamic text-to-image generation, customizable prompt input, fast rendering responses, mobile-optimized UI components, and structured backend processing. This project demonstrates strong expertise in AI integration, frontend mobile engineering, and backend API management.",
   image:
-    "/src/assets/image-x.jpg",
+    "/assets/image-x.jpg",
   techStack: [
     "React Native",
     "Node.js",
@@ -105,7 +105,7 @@ export const projects: Project[] = [
   longDescription:
     "Task-Flow is a fullstack productivity and task management mobile application designed to help users organize, track, and manage daily activities efficiently. Built with React Native and powered by Expo and Convex, the app delivers a seamless cross-platform experience with real-time data synchronization and modern UI architecture.\n\nThe application allows users to create, edit, delete, and categorize tasks while maintaining clear visibility between completed, active, and deleted items. Task-Flow also integrates notification reminders, timestamp tracking, dark/light mode support, and progress analytics to enhance productivity and usability.\n\nThe Settings module includes structured productivity insights such as total tasks, completed tasks, and active tasks. It also provides preference controls including dark mode, notification toggles, auto-sync configuration, and a secure reset feature within a protected 'Danger Zone' that confirms before permanently deleting all stored tasks.\n\nThis project demonstrates fullstack mobile engineering expertise including state management, backend integration with Convex, structured data modeling, real-time updates, scalable architecture, and performance optimization using Expo.",
   image:
-    "/src/assets/task-flow-preview.jpg",
+    "/assets/task-flow-preview.jpg",
   techStack: [
     "React Native",
     "Expo",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
   title: "Eco Platforms Limited – Sustainable Solutions Web App",
   description: "Eco Platforms web application built with React and Django to provide sustainable solutions, online services, and environmental management tools.",
   longDescription: "Eco Platforms Limited is a web application designed to deliver eco-friendly solutions and digital services for businesses and communities. Built with React for a dynamic frontend and Django for a robust backend, the app integrates interactive dashboards, real-time data management, and responsive design to offer a seamless user experience.\n\nI contributed to the development of the frontend, implementing key features like user dashboards, service booking interfaces, and responsive UI components. The project highlights expertise in full-stack web development, API integration, and scalable web architecture.\n\nKey features include interactive service modules, user-friendly dashboards, responsive layouts, secure authentication, and data management tools tailored for sustainability projects.",
-  image: "/src/assets/eco-platforms.jpg",
+  image: "/assets/eco-platforms.jpg",
   techStack: [
     "React",
     "Django",
@@ -142,7 +142,7 @@ export const projects: Project[] = [
   title: "Lulichat – AI-Powered Customer Chat Platform Landing Page",
   description: "Landing page for Lulichat, a Next.js web platform providing AI-driven chat solutions for businesses in Nigeria and Africa.",
   longDescription: "Lulichat is the official landing page for an AI-powered customer chat platform designed to help businesses automate and streamline their customer support. Built with Next.js for fast performance and SEO optimization, the landing page showcases key features, service offerings, and integrations with WhatsApp, Instagram, and other communication channels.\n\nI contributed to the frontend development, implementing responsive layouts, interactive sections, and smooth user experiences optimized for conversion and engagement. The project highlights expertise in modern web development, React/Next.js frameworks, and UI/UX design tailored for tech startups and small businesses.\n\nKey features include responsive design, dynamic content sections, optimized SEO, interactive call-to-action buttons, and seamless integration with marketing and AI automation tools.",
-  image: "/src/assets/Lulichat-preview.png",
+  image: "/assets/Lulichat-preview.png",
   techStack: [
     "Next.js",
     "React",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
   title: "Msquared Kiddies Arena – Kids E-commerce Platform",
   description: "A full-featured e-commerce website for Msquared Kiddies Arena, built on WordPress with WooCommerce for online sales.",
   longDescription: "Msquared Kiddies Arena is a complete e-commerce platform built on WordPress, designed to offer a seamless shopping experience for customers of the kids’ store. The platform integrates WooCommerce for product management, online payments, and order tracking, while ensuring a responsive and mobile-friendly design. \n\nI contributed to the frontend customization, implementing responsive themes, optimizing user experience, and integrating essential plugins for payments, inventory, and shipping. This project demonstrates expertise in WordPress theme development, e-commerce workflow design, and creating secure, scalable online shopping platforms.",
-  image: "/src/assets/msquareka-overview.png",
+  image: "/assets/msquareka-overview.png",
   techStack: [
     "WordPress",
     "WooCommerce",
@@ -181,7 +181,7 @@ export const projects: Project[] = [
   title: "Luli Buy – E-commerce Platform for Networking Equipment",
   description: "A full-featured e-commerce website for Luli Buy, built on WordPress/WooCommerce to sell networking and IT equipment online.",
   longDescription: "Luli Buy is a comprehensive e-commerce platform designed for selling networking and IT equipment online. Built on WordPress with WooCommerce, the platform offers a seamless shopping experience, including product catalog browsing, secure online payments, inventory management, and order tracking.\n\nI contributed to frontend customization, responsive theme implementation, and optimizing user experience across devices. The platform demonstrates skills in WordPress development, e-commerce workflow optimization, and delivering scalable online retail solutions tailored for tech products.",
-  image: "/src/assets/lulibuy-overview.PNG",
+  image: "/assets/lulibuy-overview.png",
   techStack: [
     "WordPress",
     "WooCommerce",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
   title: "VHM Solution – Church & Ministry Web Platform",
   description: "A full-featured church/ministry platform with live streaming, event management, sermons, blogs, gallery, and donation integration.",
   longDescription: "VHM Solution is a comprehensive digital platform for churches and ministries, designed to engage members online. The platform supports live streaming via YouTube, Facebook, and Instagram, event listings, sermon posting, blog updates, image galleries, and donation management integrated with First Bank (FirstCheckout) for seamless giving.\n\nI contributed to frontend development using React and ensured responsive, user-friendly interfaces across devices. The platform highlights skills in full-stack web development, payment integration, live streaming integration, and building scalable solutions for community-driven organizations.",
-  image: "/src/assets/vhmsolutionpalace-overview.PNG",
+  image: "/assets/vhmsolutionpalace-overview.PNG",
   techStack: [
     "WordPress",
     "PHP",
@@ -223,7 +223,7 @@ export const projects: Project[] = [
   title: "Lulichat Full SEO with AI SEO",
   description: "Full Google Business Profile setup, local SEO optimization, and content strategy for Lulichat.",
   longDescription: "Project Problem:\nLulichat had no Google presence—no profile, no keywords, no photos, and no categories. Google couldn't understand the business, so it never appeared on Search or Maps. Visibility was zero, engagement was low, and potential clients couldn't discover them.\n\nSolution:\nI built their entire Google Business Profile from scratch: added correct categories, a keyword-rich description, branded visuals, service list, and GBP posts. I aligned website signals, strengthened Google Maps SEO, and improved their ranking for CRM-related keywords.",
-  image: "/src/assets/lulichat-seo.png",
+  image: "/assets/lulichat-seo.png",
   techStack: [
     "Google Business Profile (GBP) set-up",
     "GBP Optimization",
@@ -245,7 +245,7 @@ export const projects: Project[] = [
     title: "Digitek Hub",
     description: "Full GBP setup and local SEO optimization for Digitek Hub, improving visibility and inquiries.",
     longDescription: "Project Problem:\nDigitek Hub had no Google Business Profile, meaning zero local search presence. No keywords, categories, photos, or SEO signals. Google had nothing to rank, making the brand invisible, untrustworthy, and unsearchable.\n\nSolution:\nI created their full GBP setup, added optimized categories, descriptions, branded visuals, and keyword-rich services. I improved website relevance, activated posts, and implemented map SEO—building a strong digital footprint for visibility and inquiries.",
-    image: "/src/assets/digitekhub-seo.png",
+    image: "/assets/digitekhub-seo.png",
     techStack: [
     "Google Business Profile (GBP) set-up",
     "GBP Optimization",
@@ -267,7 +267,7 @@ export const projects: Project[] = [
     title: "Lulifiber Internet Company",
     description: "SEO and GBP setup for Lulifiber, improving online visibility for fiber internet services.",
     longDescription: "Project Problem:\nLulifiber had almost no online visibility. No GBP, no keywords, wrong categories, no service list, no posts, and outdated visuals. Customers searching for 'fiber internet,' 'unlimited broadband,' and 'WiFi installation' could not find the brand.\n\nSolution:\nI built a complete GBP setup with proper categories, keyword-rich descriptions, branded visuals, and optimized services. I aligned their website with local SEO signals and strengthened Google Maps SEO, making Lulifiber more discoverable in a competitive ISP market.",
-    image: "/src/assets/lulifiber-seo.png",
+    image: "/assets/lulifiber-seo.png",
     techStack: [
     "Google Business Profile (GBP) set-up",
     "GBP Optimization",
